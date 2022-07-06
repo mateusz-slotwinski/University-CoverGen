@@ -14,136 +14,242 @@ Chociaż w swojej istocie fizyka atomu rządzi się prawami fizyki kwantowej, w 
 const Mathematics: Data = {
   TITLE: 'Matematyka',
   title_2: '',
-  PART: 1,
-  SUBTITLE: [
-    'Analiza matematyczna: całki wielokrotne i krzywoliniowe,',
-    'szeregi Fouriera, transformacje całkowe',
-  ],
   AUTHOR: 'Mateusz Słotwiński',
   color: '#E2942D',
   icon: 'mathematics.svg',
   pages: 300,
   image: 'mathematics.jpg',
   about: aboutplaceholder,
+  levels: [
+    {
+      PART: 1,
+      SUBTITLE: [
+        'Analiza matematyczna: funkcje jednej zmiennej',
+        'granice, pochodne, różniczki, wstęp do całek',
+      ],
+    },
+    {
+      PART: 2,
+      SUBTITLE: [
+        'Analiza matematyczna: funkcje wielu zmiennych,',
+        'ciągi i szeregi potęgowe oraz funkcyjne',
+      ],
+    },
+    {
+      PART: 3,
+      SUBTITLE: [
+        'Analiza matematyczna: całki wielokrotne i krzywoliniowe,',
+        'szeregi Fouriera, transformacje całkowe',
+      ],
+    },
+  ],
+
+  PART: 0,
+  SUBTITLE: ['', ''],
 }
 
 const Physics: Data = {
   TITLE: 'Fizyka',
   title_2: '',
-  PART: 7,
-  SUBTITLE: [
-    'Fizyka kwantowa i cząstek elementarnych,',
-    'wprowadzenie do fizyki jądrowej',
-  ],
+
   AUTHOR: 'Mateusz Słotwiński',
   color: '#006E89',
   icon: 'physics.svg',
   pages: 700,
   image: 'physics.jpg',
   about: aboutplaceholder,
+  levels: [
+    {
+      PART: 7,
+      SUBTITLE: [
+        'Fizyka kwantowa i cząstek elementarnych,',
+        'wprowadzenie do fizyki jądrowej',
+      ],
+    },
+  ],
+
+  PART: 0,
+  SUBTITLE: ['', ''],
 }
 
 const PhysicsNanostr: Data = {
   TITLE: 'Fizyka Materiałów',
   title_2: 'i Nanostruktur',
-  PART: 1,
-  SUBTITLE: ['Fizyka struktur półprzewodnikowych', ''],
   AUTHOR: 'Mateusz Słotwiński',
   color: '#6D547C',
   icon: 'physicsnanostr.svg',
   pages: 400,
   image: 'physicsnanostr.jpg',
   about: aboutplaceholder,
+  levels: [
+    {
+      PART: 1,
+      SUBTITLE: [
+        'Analiza matematyczna: całki wielokrotne i krzywoliniowe,',
+        'szeregi Fouriera, transformacje całkowe',
+      ],
+    },
+  ],
+
+  PART: 0,
+  SUBTITLE: ['', ''],
+  advanced: true,
 }
 
 const PhysicsNuclear: Data = {
   TITLE: 'Fizyka i Technika',
   title_2: 'Jądrowa',
-  PART: 1,
-  SUBTITLE: ['Podstawy fizyczne energetyki jądrowej', ''],
   AUTHOR: 'Mateusz Słotwiński',
   color: '#C47C00',
   icon: 'physicsnuclear.svg',
   pages: 400,
   image: 'physicsnuclear.jpg',
   about: aboutplaceholder,
+  levels: [
+    {
+      PART: 1,
+      SUBTITLE: ['Podstawy fizyczne energetyki jądrowej', ''],
+    },
+  ],
+
+  PART: 0,
+  SUBTITLE: ['', ''],
+  advanced: true,
 }
 
 const Electronics: Data = {
   TITLE: 'Elektronika',
   title_2: 'i Telekomunikacja',
-  PART: 1,
-  SUBTITLE: [
-    'Podstawowe pojęcia, fizyczne podstawy elektroniki,',
-    'prąd elektryczny, teoria obwodów',
-  ],
   AUTHOR: 'Mateusz Słotwiński',
   color: '#aa2222',
   icon: 'electronics.svg',
   pages: 450,
   image: 'electronics.jpg',
   about: aboutplaceholder,
+  levels: [
+    {
+      PART: 1,
+      SUBTITLE: [
+        'Podstawowe pojęcia, fizyczne podstawy elektroniki,',
+        'prąd elektryczny, teoria obwodów',
+      ],
+    },
+  ],
+
+  PART: 0,
+  SUBTITLE: ['', ''],
 }
 
 const Informatics: Data = {
   TITLE: 'Informatyka',
   title_2: '',
-  PART: 3,
-  SUBTITLE: ['Programowanie Obiektowe', ''],
   AUTHOR: 'Mateusz Słotwiński',
   color: '#566672',
   icon: 'informatics.svg',
   pages: 450,
   image: 'informatics.jpg',
   about: aboutplaceholder,
+  levels: [
+    {
+      PART: 1,
+      SUBTITLE: [
+        'Analiza matematyczna: całki wielokrotne i krzywoliniowe,',
+        'szeregi Fouriera, transformacje całkowe',
+      ],
+    },
+  ],
+
+  PART: 0,
+  SUBTITLE: ['', ''],
 }
 
 const Chemistry: Data = {
   TITLE: 'Technologia',
   title_2: 'Chemiczna',
-  PART: 1,
-  SUBTITLE: ['Chemia Fizyczna', ''],
   AUTHOR: 'Mateusz Słotwiński',
   color: '#A19059',
   icon: 'chemistry.svg',
   pages: 450,
   image: 'chemistry.jpg',
   about: aboutplaceholder,
+  levels: [
+    {
+      PART: 1,
+      SUBTITLE: [
+        'Analiza matematyczna: całki wielokrotne i krzywoliniowe,',
+        'szeregi Fouriera, transformacje całkowe',
+      ],
+    },
+  ],
+
+  PART: 0,
+  SUBTITLE: ['', ''],
 }
 
 const Economics: Data = {
   TITLE: 'Ekonomia',
   title_2: '',
-  PART: 1,
-  SUBTITLE: ['Podstawy ekonomii, mikroekonomia,', 'ekonomia przedsiębiorstwa'],
+
   AUTHOR: 'Mateusz Słotwiński',
   color: '#2e7d32',
   icon: 'economics.svg',
   pages: 450,
   image: 'economics.jpg',
   about: aboutplaceholder,
+  levels: [
+    {
+      PART: 1,
+      SUBTITLE: [
+        'Podstawy ekonomii, mikroekonomia,',
+        'ekonomia przedsiębiorstwa',
+      ],
+    },
+  ],
+
+  PART: 0,
+  SUBTITLE: ['', ''],
 }
 
 const Biophysics: Data = {
-  TITLE: 'Ekonomia',
+  TITLE: 'Biofizyka',
   title_2: '',
-  PART: 1,
-  SUBTITLE: ['Podstawy ekonomii, mikroekonomia,', 'ekonomia przedsiębiorstwa'],
   AUTHOR: 'Mateusz Słotwiński',
   color: '#2e7d32',
-  icon: 'economics.svg',
+  icon: 'biophysics.svg',
   pages: 450,
   image: 'economics.jpg',
   about: aboutplaceholder,
+  levels: [
+    {
+      PART: 1,
+      SUBTITLE: [
+        'Analiza matematyczna: całki wielokrotne i krzywoliniowe,',
+        'szeregi Fouriera, transformacje całkowe',
+      ],
+    },
+  ],
+
+  PART: 0,
+  SUBTITLE: ['', ''],
+}
+
+const SetVol = (Book: Data, vol: number) => {
+  Book.PART = vol
+  if (Book.levels[vol - 1]?.SUBTITLE) {
+    Book.SUBTITLE = Book.levels[vol - 1]?.SUBTITLE
+  }
+  return Book
 }
 
 export default class Examples {
-  static Mathematics = (): Data => Mathematics
-  static Physics = (): Data => Physics
-  static Electronics = (): Data => Electronics
-  static Informatics = (): Data => Informatics
-  static Chemistry = (): Data => Chemistry
-  static Economics = (): Data => Economics
-  static PhysicsNanostr = (): Data => PhysicsNanostr
-  static PhysicsNuclear = (): Data => PhysicsNuclear
+  static Mathematics = (vol: number) => SetVol(Mathematics, vol)
+  static Physics = (vol: number) => SetVol(Physics, vol)
+  static Electronics = (vol: number) => SetVol(Electronics, vol)
+  static Informatics = (vol: number) => SetVol(Informatics, vol)
+  static Chemistry = (vol: number) => SetVol(Chemistry, vol)
+  static Economics = (vol: number) => SetVol(Economics, vol)
+  static Biophysics = (vol: number) => SetVol(Biophysics, vol)
+
+  static PhysicsNanostr = (vol: number) => SetVol(PhysicsNanostr, vol)
+  static PhysicsNuclear = (vol: number) => SetVol(PhysicsNuclear, vol)
 }

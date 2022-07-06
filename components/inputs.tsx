@@ -5,6 +5,8 @@ import {Data} from '../types/data'
 
 import Examples from './examples'
 
+import VolModal from './pick'
+
 
 const Inputs: React.FunctionComponent = (props:any) => {
   const [title, setTitle] = useState('')
@@ -18,6 +20,7 @@ const Inputs: React.FunctionComponent = (props:any) => {
   const [title_2, setTitle2] = useState('')
   const [pages, setPages] = useState(1)
   const [about, setAbout] = useState('')
+  const [example, setExample] = useState(0)
 
   const changeTitleHandler = (event:any) => {
     const value = event.target.value
@@ -68,19 +71,39 @@ const Inputs: React.FunctionComponent = (props:any) => {
     props.onSubmit(data)
   }
 
+  const allExamples = [
+    Examples.Mathematics,
+    Examples.Physics,
+    Examples.Electronics,
+    Examples.Informatics,
+    Examples.Chemistry,
+    Examples.Economics,
+    Examples.Biophysics,
+    Examples.PhysicsNanostr,
+    Examples.PhysicsNuclear
+  ]
+
   return (
       <main id="container" className="inputs">
         <div id="examples">
-          <div className="example"><Image width="70" height="70" alt="Matematyka" src="/icons/sciences/mathematics.svg" onClick={()=> generateCanvas(Examples.Mathematics)} /></div>
-          <div className="example"><Image width="70" height="70" alt="Fizyka" src="/icons/sciences/physics.svg" onClick={()=> generateCanvas(Examples.Physics)} /></div>
-          <div className="example"><Image width="70" height="70" alt="Elektronika" src="/icons/sciences/electronics.svg" onClick={()=> generateCanvas(Examples.Electronics)} /></div>
-          <div className="example"><Image width="70" height="70" alt="Informatyka" src="/icons/sciences/informatics.svg" onClick={()=> generateCanvas(Examples.Informatics)} /></div>
-          <div className="example"><Image width="70" height="70" alt="Chemia" src="/icons/sciences/chemistry.svg" onClick={()=> generateCanvas(Examples.Chemistry)} /></div>
-          <div className="example"><Image width="70" height="70" alt="Ekonomia" src="/icons/sciences/economics.svg" onClick={()=> generateCanvas(Examples.Economics)} /></div>
+        {[...Array(allExamples.length).keys()].map((e) => <div key={e} className={e == example ? 'example thisPart' : 'example'} id={allExamples[e](1).advanced ? 'adv' : ''}><Image alt={allExamples[e](1).TITLE} width="70" height="70" src={`/icons/sciences/${allExamples[e](1).icon}`} onClick={()=> setExample(e)} /></div>)}
+          {/* <div className={0 == example ? 'example thisPart' : 'example'}><Image width="70" height="70" alt="Matematyka" src="/icons/sciences/mathematics.svg" onClick={()=> setExample(0)} /></div>
+          <div className={1 == example ? 'example thisPart' : 'example'}><Image width="70" height="70" alt="Fizyka" src="/icons/sciences/physics.svg" onClick={()=> setExample(1)} /></div>
+          <div className="example"><Image width="70" height="70" alt="Elektronika" src="/icons/sciences/electronics.svg" onClick={()=> setExample(2)} /></div>
+          <div className="example"><Image width="70" height="70" alt="Informatyka" src="/icons/sciences/informatics.svg" onClick={()=> setExample(3)} /></div>
+          <div className="example"><Image width="70" height="70" alt="Chemia" src="/icons/sciences/chemistry.svg" onClick={()=> setExample(4)} /></div>
+          <div className="example"><Image width="70" height="70" alt="Ekonomia" src="/icons/sciences/economics.svg" onClick={()=> setExample(5)} /></div>
           <div id="gap"></div>
-          <div className="example adv"><Image width="70" height="70" alt="Elektronika" src="/icons/sciences/physicsnanostr.svg" onClick={()=> generateCanvas(Examples.PhysicsNanostr)} /></div>
-          <div className="example adv"><Image width="70" height="70" alt="Elektronika" src="/icons/sciences/physicsnuclear.svg" onClick={()=> generateCanvas(Examples.PhysicsNuclear)} /></div>
+          <div className="example adv"><Image width="70" height="70" alt="Elektronika" src="/icons/sciences/physicsnanostr.svg" onClick={()=> setExample(7)} /></div>
+          <div className="example adv"><Image width="70" height="70" alt="Elektronika" src="/icons/sciences/physicsnuclear.svg" onClick={()=> setExample(8)} /></div> */}
         </div>
+
+        <div id="examples">
+          {[...Array(allExamples[example](1).levels.length).keys()].map((e) => <div key={e} className="example part" onClick={() => generateCanvas(allExamples[example](e+1))}>{e + 1}</div>)}
+        </div>
+        
+
+        
         <input value={title} onChange={changeTitleHandler} id="title" placeholder="Tytuł" />
         <input value={title_2} onChange={changeTitle2Handler} id="subtitle" placeholder="Tytuł 2" />
         <input value={part} onChange={changePartHandler} id="part" type="number" placeholder="Część" />
@@ -103,6 +126,7 @@ const Inputs: React.FunctionComponent = (props:any) => {
           image: image,
           title_2: title_2,
           about: about,
+          levels: [],
         })}>
           Generuj
         </button>
