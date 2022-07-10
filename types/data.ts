@@ -1,7 +1,7 @@
 export type Data = {
   TITLE: string
-  PART?: number
-  SUBTITLE?: string[]
+  PART: number
+  SUBTITLE: string[]
   AUTHOR: string
   color: string
   icon: string
@@ -9,8 +9,6 @@ export type Data = {
   image: string
   title_2: string
   about: string
-  levels: {
-    PART: number
-    SUBTITLE: string[]
-  }[]
+  levels: string[][]
+  advanced?: boolean
 }

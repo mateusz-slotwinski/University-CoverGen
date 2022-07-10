@@ -38,10 +38,18 @@ export const render = (c: HTMLCanvasElement | null, data: Data): void => {
           ctx.fillStyle = '#e3e3e3'
           ctx.textAlign = 'left'
           ctx.font = 'bold 40px Rubik'
-          ctx.fillText('TOM ' + romanize(data.PART!), 120, 1100)
+          ctx.fillText('TOM ' + romanize(data.PART!), 90, 1100)
           ctx.font = '25px Rubik'
-          ctx.fillText(data.SUBTITLE![0], 120, 1136)
-          ctx.fillText(data.SUBTITLE![1], 120, 1167)
+          ctx.fillText(
+            data.SUBTITLE[0] != undefined ? data.SUBTITLE[0] : '',
+            90,
+            1136
+          )
+          ctx.fillText(
+            data.SUBTITLE[1] != undefined ? data.SUBTITLE[1] : '',
+            90,
+            1167
+          )
         }
 
         ctx.filter = 'drop-shadow(0px 0px 3px #000)'
@@ -62,7 +70,7 @@ export const render = (c: HTMLCanvasElement | null, data: Data): void => {
           ctx.fillStyle = data.color
           ctx.font = 'italic bold 42px Rubik'
           const y = data.title_2 ? 352.5 : 285
-          ctx.fillText('Prostsza niż myślisz', (c.width + 45) / 2, y)
+          ctx.fillText('(Nie tylko) dla inżynierów', (c.width + 45) / 2, y)
         }
       }
     }

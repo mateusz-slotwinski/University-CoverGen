@@ -2,7 +2,6 @@ import React, {useState} from 'react'
 import Image from 'next/image'
 
 import {Data} from '../types/data'
-
 import Examples from './examples'
 
 import VolModal from './pick'
@@ -78,7 +77,7 @@ const Inputs: React.FunctionComponent = (props:any) => {
     Examples.Informatics,
     Examples.Chemistry,
     Examples.Economics,
-    Examples.Biophysics,
+    // Examples.Biophysics,
     Examples.PhysicsNanostr,
     Examples.PhysicsNuclear
   ]
@@ -86,20 +85,27 @@ const Inputs: React.FunctionComponent = (props:any) => {
   return (
       <main id="container" className="inputs">
         <div id="examples">
-        {[...Array(allExamples.length).keys()].map((e) => <div key={e} className={e == example ? 'example thisPart' : 'example'} id={allExamples[e](1).advanced ? 'adv' : ''}><Image alt={allExamples[e](1).TITLE} width="70" height="70" src={`/icons/sciences/${allExamples[e](1).icon}`} onClick={()=> setExample(e)} /></div>)}
-          {/* <div className={0 == example ? 'example thisPart' : 'example'}><Image width="70" height="70" alt="Matematyka" src="/icons/sciences/mathematics.svg" onClick={()=> setExample(0)} /></div>
-          <div className={1 == example ? 'example thisPart' : 'example'}><Image width="70" height="70" alt="Fizyka" src="/icons/sciences/physics.svg" onClick={()=> setExample(1)} /></div>
-          <div className="example"><Image width="70" height="70" alt="Elektronika" src="/icons/sciences/electronics.svg" onClick={()=> setExample(2)} /></div>
-          <div className="example"><Image width="70" height="70" alt="Informatyka" src="/icons/sciences/informatics.svg" onClick={()=> setExample(3)} /></div>
-          <div className="example"><Image width="70" height="70" alt="Chemia" src="/icons/sciences/chemistry.svg" onClick={()=> setExample(4)} /></div>
-          <div className="example"><Image width="70" height="70" alt="Ekonomia" src="/icons/sciences/economics.svg" onClick={()=> setExample(5)} /></div>
-          <div id="gap"></div>
-          <div className="example adv"><Image width="70" height="70" alt="Elektronika" src="/icons/sciences/physicsnanostr.svg" onClick={()=> setExample(7)} /></div>
-          <div className="example adv"><Image width="70" height="70" alt="Elektronika" src="/icons/sciences/physicsnuclear.svg" onClick={()=> setExample(8)} /></div> */}
+        {[...Array(allExamples.length).keys()].map((e) => 
+          <div
+            key={e}
+            className={e == example ? 'example thisPart' : 'example'}
+            style={{backgroundColor: allExamples[e](1).color}}
+          >
+            <Image
+              alt={allExamples[e](1).TITLE}
+              width="70"
+              height="70"
+              src={`/icons/sciences/${allExamples[e](1).icon}`}
+              onClick={()=> setExample(e)}
+            />
+          </div>
+        )}
         </div>
 
         <div id="examples">
-          {[...Array(allExamples[example](1).levels.length).keys()].map((e) => <div key={e} className="example part" onClick={() => generateCanvas(allExamples[example](e+1))}>{e + 1}</div>)}
+          {[...Array(allExamples[example](1).levels.length).keys()].map((e) => 
+            <div key={e} className="example part" onClick={() => generateCanvas(allExamples[example](e+1))} style={{backgroundColor: allExamples[example](1).color}} >{e + 1}</div>
+          )}
         </div>
         
 

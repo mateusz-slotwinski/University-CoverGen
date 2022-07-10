@@ -17,31 +17,41 @@ const Mathematics: Data = {
   AUTHOR: 'Mateusz Słotwiński',
   color: '#E2942D',
   icon: 'mathematics.svg',
-  pages: 300,
+  pages: 500,
   image: 'mathematics.jpg',
   about: aboutplaceholder,
   levels: [
-    {
-      PART: 1,
-      SUBTITLE: [
-        'Analiza matematyczna: funkcje jednej zmiennej',
-        'granice, pochodne, różniczki, wstęp do całek',
-      ],
-    },
-    {
-      PART: 2,
-      SUBTITLE: [
-        'Analiza matematyczna: funkcje wielu zmiennych,',
-        'ciągi i szeregi potęgowe oraz funkcyjne',
-      ],
-    },
-    {
-      PART: 3,
-      SUBTITLE: [
-        'Analiza matematyczna: całki wielokrotne i krzywoliniowe,',
-        'szeregi Fouriera, transformacje całkowe',
-      ],
-    },
+    [
+      'Algebra liniowa: liczby zespolone, wielomiany, macierze,',
+      'wyznaczniki, przestrzenie wektorowe, rachunek wektorowy',
+    ],
+    ['Algebra abstrakcyjna: grupy, pierścienie i ciała'],
+    ['Geometria ogólna i analityczna oraz topologia'],
+    [
+      'Analiza matematyczna I: funkcje jednej zmiennej, granice',
+      'pochodne, szeregi liczbowe i funkcyjne, rachunek całkowy',
+    ],
+    [
+      'Analiza matematyczna II: funkcje wielu zmiennych, miara',
+      `i całka Lebesgue'a, całki wielokrotne i formy różniczkowe`,
+    ],
+    [
+      'Równania różniczkowe zwyczajne i cząstkowe,',
+      'wstęp do rachunku wariacyjnego',
+    ],
+    [
+      'Funkcje analityczne, analiza zespolona i funkcjonalna,',
+      'układy dynamiczne i geometria różniczkowa',
+    ],
+    [
+      'Matematyka dyskretna: logika, teoria mnogości,',
+      'kombinatoryka, relacje, rekurencje',
+    ],
+    ['Rachunek prawdopodobieństwa i statystyka'],
+    [
+      'Metody numeryczne i zastosowania matematyki w innych',
+      'naukach przyrodniczych, technicznych oraz społecznych',
+    ],
   ],
 
   PART: 0,
@@ -55,17 +65,40 @@ const Physics: Data = {
   AUTHOR: 'Mateusz Słotwiński',
   color: '#006E89',
   icon: 'physics.svg',
-  pages: 700,
+  pages: 500,
   image: 'physics.jpg',
   about: aboutplaceholder,
   levels: [
-    {
-      PART: 7,
-      SUBTITLE: [
-        'Fizyka kwantowa i cząstek elementarnych,',
-        'wprowadzenie do fizyki jądrowej',
-      ],
-    },
+    [
+      'Mechanika: ruch postępowy i obrotowy, siły i równowaga,',
+      'hydrodynamika, teoria sprężystości',
+    ],
+    [
+      'Drgania, fale mechaniczne, akustyka, teoria grawitacji',
+      'Newtona, szczególna teoria względności',
+    ],
+    [
+      'Termodynamika i fizyka statystyczna, kinetyczna teoria',
+      'gazów, elementy chemii fizycznej',
+    ],
+    [
+      'Elektrodynamika: pole elektryczne i magnetyczne, prąd',
+      'elektryczny, elektromagnetyzm, elementy elektroniki',
+    ],
+    ['Fale elektromagnetyczne, optyka geometryczna i falowa'],
+    [
+      'Mechanika, optyka i elektrodynamika kwantowa,',
+      'wstęp do kwantowej teorii pola oraz fizyki współczesnej',
+    ],
+    [
+      'Fizyka ciała stałego, przewodnictwo elektryczne materii,',
+      'fizyka plazmy, fotonika',
+    ],
+    ['Fizyka atomowa, jądrowa i cząstek elementarnych'],
+    [
+      'Astronomia, astrofizyka i kosmologia, współczesna teoria',
+      'grawitacji, ogólna teoria względności, grawitacja kwantowa',
+    ],
   ],
 
   PART: 0,
@@ -78,17 +111,12 @@ const PhysicsNanostr: Data = {
   AUTHOR: 'Mateusz Słotwiński',
   color: '#6D547C',
   icon: 'physicsnanostr.svg',
-  pages: 400,
+  pages: 500,
   image: 'physicsnanostr.jpg',
   about: aboutplaceholder,
   levels: [
-    {
-      PART: 1,
-      SUBTITLE: [
-        'Analiza matematyczna: całki wielokrotne i krzywoliniowe,',
-        'szeregi Fouriera, transformacje całkowe',
-      ],
-    },
+    ['Fizyka materiałów półprzewodnikowych'],
+    ['Fizyka procesów jonowych w ciałach stałych'],
   ],
 
   PART: 0,
@@ -100,17 +128,12 @@ const PhysicsNuclear: Data = {
   TITLE: 'Fizyka i Technika',
   title_2: 'Jądrowa',
   AUTHOR: 'Mateusz Słotwiński',
-  color: '#C47C00',
+  color: '#FF7C1E',
   icon: 'physicsnuclear.svg',
-  pages: 400,
+  pages: 500,
   image: 'physicsnuclear.jpg',
   about: aboutplaceholder,
-  levels: [
-    {
-      PART: 1,
-      SUBTITLE: ['Podstawy fizyczne energetyki jądrowej', ''],
-    },
-  ],
+  levels: [['Fizyka jądra atomowego i cząstek elementarnych']],
 
   PART: 0,
   SUBTITLE: ['', ''],
@@ -119,21 +142,29 @@ const PhysicsNuclear: Data = {
 
 const Electronics: Data = {
   TITLE: 'Elektronika',
-  title_2: 'i Telekomunikacja',
+  title_2: '',
   AUTHOR: 'Mateusz Słotwiński',
   color: '#aa2222',
   icon: 'electronics.svg',
-  pages: 450,
+  pages: 500,
   image: 'electronics.jpg',
   about: aboutplaceholder,
   levels: [
-    {
-      PART: 1,
-      SUBTITLE: [
-        'Podstawowe pojęcia, fizyczne podstawy elektroniki,',
-        'prąd elektryczny, teoria obwodów',
-      ],
-    },
+    [
+      'Wstęp do elektroniki i elektrotechniki, fizyczne podstawy',
+      'elektroniki i półprzewodników, materiały w elektronice',
+    ],
+    ['Teoria i analiza obwodów, podstawy pomiarów wielkości', 'elektrycznych'],
+    ['Sygnały i systemy, przetwarzanie i analiza sygnałów'],
+    ['Elektronika analogowa'],
+    ['Elektronika cyfrowa, systemy cyfrowe i komputerowe'],
+    ['Technologie elektroniczne i fotoniczne,', 'fotonika światłowodowa'],
+    [
+      'Elektronika mikrofalowa, zaawansowane przetwarzanie',
+      'sygnałów i obrazów',
+    ],
+    ['Podstawy mikrokontrolerów i systemów wbudowanych'],
+    ['Podstawy mikroelektroniki, projektowanie systemów', 'elektronicznych'],
   ],
 
   PART: 0,
@@ -146,19 +177,20 @@ const Informatics: Data = {
   AUTHOR: 'Mateusz Słotwiński',
   color: '#566672',
   icon: 'informatics.svg',
-  pages: 450,
+  pages: 500,
   image: 'informatics.jpg',
   about: aboutplaceholder,
   levels: [
-    {
-      PART: 1,
-      SUBTITLE: [
-        'Analiza matematyczna: całki wielokrotne i krzywoliniowe,',
-        'szeregi Fouriera, transformacje całkowe',
-      ],
-    },
+    ['Architektura komputerów'],
+    ['Algorytmy i struktury danych'],
+    ['Podstawy informatyki i programowania,', ' systemy operacyjne'],
+    ['Programowanie strukturalne i obiektowe'],
+    ['Programowanie aplikacji mobilnych i komputerowych'],
+    ['Sieci komupterowe'],
+    ['Bazy danych i data science'],
+    ['Programowanie stron internetowych i aplikacji sieciowych'],
+    ['Wprowadzenie do sztucznej inteligencji', ' i uczenia maszynowego'],
   ],
-
   PART: 0,
   SUBTITLE: ['', ''],
 }
@@ -169,17 +201,14 @@ const Chemistry: Data = {
   AUTHOR: 'Mateusz Słotwiński',
   color: '#A19059',
   icon: 'chemistry.svg',
-  pages: 450,
+  pages: 500,
   image: 'chemistry.jpg',
   about: aboutplaceholder,
   levels: [
-    {
-      PART: 1,
-      SUBTITLE: [
-        'Analiza matematyczna: całki wielokrotne i krzywoliniowe,',
-        'szeregi Fouriera, transformacje całkowe',
-      ],
-    },
+    [
+      'Podstawowe pojęcia, fizyczne podstawy elektroniki,',
+      'prąd elektryczny, teoria obwodów',
+    ],
   ],
 
   PART: 0,
@@ -193,18 +222,10 @@ const Economics: Data = {
   AUTHOR: 'Mateusz Słotwiński',
   color: '#2e7d32',
   icon: 'economics.svg',
-  pages: 450,
+  pages: 500,
   image: 'economics.jpg',
   about: aboutplaceholder,
-  levels: [
-    {
-      PART: 1,
-      SUBTITLE: [
-        'Podstawy ekonomii, mikroekonomia,',
-        'ekonomia przedsiębiorstwa',
-      ],
-    },
-  ],
+  levels: [['Podstawy ekonomii, mikroekonomia,', 'ekonomia przedsiębiorstwa']],
 
   PART: 0,
   SUBTITLE: ['', ''],
@@ -216,17 +237,14 @@ const Biophysics: Data = {
   AUTHOR: 'Mateusz Słotwiński',
   color: '#2e7d32',
   icon: 'biophysics.svg',
-  pages: 450,
+  pages: 500,
   image: 'economics.jpg',
   about: aboutplaceholder,
   levels: [
-    {
-      PART: 1,
-      SUBTITLE: [
-        'Analiza matematyczna: całki wielokrotne i krzywoliniowe,',
-        'szeregi Fouriera, transformacje całkowe',
-      ],
-    },
+    [
+      'Analiza matematyczna: całki wielokrotne i krzywoliniowe,',
+      'szeregi Fouriera, transformacje całkowe',
+    ],
   ],
 
   PART: 0,
@@ -235,8 +253,8 @@ const Biophysics: Data = {
 
 const SetVol = (Book: Data, vol: number) => {
   Book.PART = vol
-  if (Book.levels[vol - 1]?.SUBTITLE) {
-    Book.SUBTITLE = Book.levels[vol - 1]?.SUBTITLE
+  if (Book.levels[vol - 1]) {
+    Book.SUBTITLE = Book.levels[vol - 1]
   }
   return Book
 }
