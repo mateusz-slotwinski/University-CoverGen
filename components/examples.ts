@@ -22,8 +22,8 @@ const Mathematics: Data = {
   about: aboutplaceholder,
   levels: [
     [
-      'Algebra liniowa: liczby zespolone, wielomiany, macierze,',
-      'wyznaczniki, przestrzenie wektorowe, rachunek wektorowy',
+      'Wstęp do matematyki oraz algebra liniowa: wielomiany',
+      'macierze, wyznaczniki, przestzenie, rachunek wektorowy',
     ],
     ['Algebra abstrakcyjna: grupy, pierścienie i ciała'],
     ['Geometria ogólna i analityczna oraz topologia'],
@@ -45,9 +45,9 @@ const Mathematics: Data = {
     ],
     [
       'Matematyka dyskretna: logika, teoria mnogości,',
-      'kombinatoryka, relacje, rekurencje',
+      'teoria gier, kombinatoryka, relacje, rekurencje',
     ],
-    ['Rachunek prawdopodobieństwa i statystyka'],
+    ['Propablistyka, statystyka i analiza danych'],
     [
       'Metody numeryczne i zastosowania matematyki w innych',
       'naukach przyrodniczych, technicznych oraz społecznych',
@@ -105,41 +105,6 @@ const Physics: Data = {
   SUBTITLE: ['', ''],
 }
 
-const PhysicsNanostr: Data = {
-  TITLE: 'Fizyka Materiałów',
-  title_2: 'i Nanostruktur',
-  AUTHOR: 'Mateusz Słotwiński',
-  color: '#6D547C',
-  icon: 'physicsnanostr.svg',
-  pages: 500,
-  image: 'physicsnanostr.jpg',
-  about: aboutplaceholder,
-  levels: [
-    ['Fizyka materiałów półprzewodnikowych'],
-    ['Fizyka procesów jonowych w ciałach stałych'],
-  ],
-
-  PART: 0,
-  SUBTITLE: ['', ''],
-  advanced: true,
-}
-
-const PhysicsNuclear: Data = {
-  TITLE: 'Fizyka i Technika',
-  title_2: 'Jądrowa',
-  AUTHOR: 'Mateusz Słotwiński',
-  color: '#FF7C1E',
-  icon: 'physicsnuclear.svg',
-  pages: 500,
-  image: 'physicsnuclear.jpg',
-  about: aboutplaceholder,
-  levels: [['Fizyka jądra atomowego i cząstek elementarnych']],
-
-  PART: 0,
-  SUBTITLE: ['', ''],
-  advanced: true,
-}
-
 const Electronics: Data = {
   TITLE: 'Elektronika',
   title_2: '',
@@ -154,16 +119,22 @@ const Electronics: Data = {
       'Wstęp do elektroniki i elektrotechniki, fizyczne podstawy',
       'elektroniki i półprzewodników, materiały w elektronice',
     ],
-    ['Teoria i analiza obwodów, podstawy pomiarów wielkości', 'elektrycznych'],
+    [
+      'Teoria obwodów i ich analiza, podstawy pomiarów',
+      'wielkości elektrycznych',
+    ],
     ['Sygnały i systemy, przetwarzanie i analiza sygnałów'],
     ['Elektronika analogowa'],
     ['Elektronika cyfrowa, systemy cyfrowe i komputerowe'],
-    ['Technologie elektroniczne i fotoniczne,', 'fotonika światłowodowa'],
     [
-      'Elektronika mikrofalowa, zaawansowane przetwarzanie',
-      'sygnałów i obrazów',
+      'Technologie elektroniczne i fotoniczne, optoelektronika',
+      'zintegrowana, fotonika światłowodowa',
     ],
-    ['Podstawy mikrokontrolerów i systemów wbudowanych'],
+    [
+      'Elektronika mikrofalowa, wstęp do telekomunikacji,',
+      'zaawansowane przetwarzanie sygnałów i obrazów',
+    ],
+    ['Podstawy mikrokontrolerów, mikrosystemów oraz ', 'systemów wbudowanych'],
     ['Podstawy mikroelektroniki, projektowanie systemów', 'elektronicznych'],
   ],
 
@@ -189,7 +160,7 @@ const Informatics: Data = {
     ['Sieci komupterowe'],
     ['Bazy danych i data science'],
     ['Programowanie stron internetowych i aplikacji sieciowych'],
-    ['Wprowadzenie do sztucznej inteligencji', ' i uczenia maszynowego'],
+    ['Wprowadzenie do sztucznej inteligencji', ' oraz uczenia maszynowego'],
   ],
   PART: 0,
   SUBTITLE: ['', ''],
@@ -205,10 +176,26 @@ const Chemistry: Data = {
   image: 'chemistry.jpg',
   about: aboutplaceholder,
   levels: [
+    ['Chemia ogólna, nieorganiczna i strukturalna,', 'podstawy elektrochemii'],
     [
-      'Podstawowe pojęcia, fizyczne podstawy elektroniki,',
-      'prąd elektryczny, teoria obwodów',
+      'Chemia analityczna i stosowana, zarządzanie chemikaliami,',
+      'aparatura chemiczna, analiza chemiczna i instrumentalna',
     ],
+    ['Chemia organiczna, bioorganiczna, bionieorganiczna', 'i biochemia'],
+    [
+      'Chemia fizyczna i termodynamika chemiczna, podstawy',
+      'chemii kwantowej, chemia jądrowa z radiochemią',
+    ],
+    [
+      'Surowce energetyczne i ich przetwarzanie,',
+      'biopaliwa i paliwa alternatywne, procesy spalania',
+    ],
+    [
+      'Krystalografia i materiały w technologii chemicznej,',
+      'technologia i chemia materiałów, chemia polimerów',
+    ],
+    ['Inżynieria chemiczna i procesowa, aparatura procesowa'],
+    ['Technologia chemiczna, projektowanie procesów', 'technologicznych'],
   ],
 
   PART: 0,
@@ -249,6 +236,74 @@ const Biophysics: Data = {
 
   PART: 0,
   SUBTITLE: ['', ''],
+}
+
+const PhysicsNanostr: Data = {
+  TITLE: 'Fizyka Materiałów',
+  title_2: 'i Nanostruktur',
+  AUTHOR: 'Mateusz Słotwiński',
+  color: '#6D547C',
+  icon: 'physicsnanostr.svg',
+  pages: 500,
+  image: 'physicsnanostr.jpg',
+  about: aboutplaceholder,
+  levels: [
+    [
+      'Fizyka półprzewodników i przyrządów półprzewodnikowych,',
+      'półprzewodnikowe przyrządy optoelektroniczne',
+    ],
+    ['Fizyka, chemia i optyka ciała stałego, struktura materii'],
+    [
+      'Kwantowe metody fizyki ciała stałego, ',
+      'nadprzewodnictwo i nadciekłość',
+    ],
+    [
+      'Metody badania materiałów: strukturalne, termiczne,',
+      'spektroskopowe i elektryczne',
+    ],
+    ['Nanostruktury, nanoinżynieria i nanotechnologie'],
+    [
+      'Metody magazynowania i przetwarzania energii,',
+      'fotowoltaika, ogniwa paliwowe',
+    ],
+    ['Komputerowe metody symulacji'],
+  ],
+
+  PART: 0,
+  SUBTITLE: ['', ''],
+  advanced: true,
+}
+
+const PhysicsNuclear: Data = {
+  TITLE: 'Fizyka i Technika',
+  title_2: 'Jądrowa',
+  AUTHOR: 'Mateusz Słotwiński',
+  color: '#FF7C1E',
+  icon: 'physicsnuclear.svg',
+  pages: 500,
+  image: 'physicsnuclear.jpg',
+  about: aboutplaceholder,
+  levels: [
+    [
+      'Fizyka cząstek elementarnych, oddziaływania fundamentalne,',
+      'wstęp do elektrodynamiki kwantowej i kwantowej teorii pola',
+    ],
+    [
+      'Zaawansowana fizyka jądrowa, oddziaływanie promieniowania',
+      'jonizującego z materią',
+    ],
+    ['Metody i techniki jądrowe, dozymetria'],
+    ['Podstawy fizyczne energetyki jądrowej'],
+    ['Detekcja promieniowania jądrowego, modelowanie', 'procesów jądrowych'],
+    [
+      'Układy kontrolno-pomiarowe w instalacjach jądrowych,',
+      'nowe rozwiązania w energetyce jądrowej',
+    ],
+  ],
+
+  PART: 0,
+  SUBTITLE: ['', ''],
+  advanced: true,
 }
 
 const SetVol = (Book: Data, vol: number) => {
