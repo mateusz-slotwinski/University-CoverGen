@@ -77,9 +77,10 @@ const Inputs: React.FunctionComponent = (props:any) => {
     Examples.Informatics,
     Examples.Chemistry,
     Examples.Economics,
-    // Examples.Biophysics,
+    Examples.Telecommunications,
     Examples.PhysicsNanostr,
-    Examples.PhysicsNuclear
+    Examples.PhysicsNuclear,
+    Examples.QuantumEngineering
   ]
 
   return (
@@ -125,7 +126,7 @@ const Inputs: React.FunctionComponent = (props:any) => {
           TITLE: title.toUpperCase(),
           PART: part,
           SUBTITLE: [subtitle_a, subtitle_b],
-          AUTHOR: author,
+          AUTHOR: [author],
           color:color,
           icon: icon,
           pages: pages,

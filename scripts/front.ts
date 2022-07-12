@@ -11,6 +11,8 @@ export const render = (c: HTMLCanvasElement | null, data: Data): void => {
 
     if (ctx) {
       background.onload = (): void => {
+        const long = data.AUTHOR.length > 2 ? 35 * (data.AUTHOR.length - 2) : 0
+
         ctx.fillStyle = '#e3e3e3'
         ctx.fillRect(0, 0, c.width, c.height)
 
@@ -55,9 +57,15 @@ export const render = (c: HTMLCanvasElement | null, data: Data): void => {
         ctx.filter = 'drop-shadow(0px 0px 3px #000)'
 
         ctx.textAlign = 'right'
-        ctx.font = 'bold italic 32px Rubik'
+        const size = data.AUTHOR.length <= 2 ? 32 : 24
+        ctx.font = `bold italic ${size}px Rubik`
         ctx.fillStyle = '#e3e3e3'
-        ctx.fillText(data.AUTHOR, c.width - 40, 70)
+        for (const author in data.AUTHOR)
+          ctx.fillText(
+            data.AUTHOR[author],
+            c.width - 40,
+            (data.AUTHOR.length <= 3 ? 70 : 40) + (size + 8) * +author
+          )
 
         {
           ctx.textAlign = 'center'

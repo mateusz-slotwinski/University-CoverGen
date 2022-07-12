@@ -14,7 +14,7 @@ Chociaż w swojej istocie fizyka atomu rządzi się prawami fizyki kwantowej, w 
 const Mathematics: Data = {
   TITLE: 'Matematyka',
   title_2: '',
-  AUTHOR: 'Mateusz Słotwiński',
+  AUTHOR: ['Mateusz Słotwiński'],
   color: '#E2942D',
   icon: 'mathematics.svg',
   pages: 500,
@@ -22,7 +22,7 @@ const Mathematics: Data = {
   about: aboutplaceholder,
   levels: [
     [
-      'Wstęp do matematyki oraz algebra liniowa: wielomiany',
+      'Wstęp do matematyki i algebra liniowa: wielomiany',
       'macierze, wyznaczniki, przestzenie, rachunek wektorowy',
     ],
     ['Algebra abstrakcyjna: grupy, pierścienie i ciała'],
@@ -62,7 +62,7 @@ const Physics: Data = {
   TITLE: 'Fizyka',
   title_2: '',
 
-  AUTHOR: 'Mateusz Słotwiński',
+  AUTHOR: ['Mateusz Słotwiński'],
   color: '#006E89',
   icon: 'physics.svg',
   pages: 500,
@@ -108,7 +108,7 @@ const Physics: Data = {
 const Electronics: Data = {
   TITLE: 'Elektronika',
   title_2: '',
-  AUTHOR: 'Mateusz Słotwiński',
+  AUTHOR: ['Mateusz Słotwiński'],
   color: '#aa2222',
   icon: 'electronics.svg',
   pages: 500,
@@ -145,7 +145,7 @@ const Electronics: Data = {
 const Informatics: Data = {
   TITLE: 'Informatyka',
   title_2: '',
-  AUTHOR: 'Mateusz Słotwiński',
+  AUTHOR: ['Mateusz Słotwiński'],
   color: '#566672',
   icon: 'informatics.svg',
   pages: 500,
@@ -169,7 +169,7 @@ const Informatics: Data = {
 const Chemistry: Data = {
   TITLE: 'Technologia',
   title_2: 'Chemiczna',
-  AUTHOR: 'Mateusz Słotwiński',
+  AUTHOR: ['Mateusz Słotwiński'],
   color: '#A19059',
   icon: 'chemistry.svg',
   pages: 500,
@@ -206,7 +206,7 @@ const Economics: Data = {
   TITLE: 'Ekonomia',
   title_2: '',
 
-  AUTHOR: 'Mateusz Słotwiński',
+  AUTHOR: ['Mateusz Słotwiński'],
   color: '#2e7d32',
   icon: 'economics.svg',
   pages: 500,
@@ -218,21 +218,40 @@ const Economics: Data = {
   SUBTITLE: ['', ''],
 }
 
+const Telecommunications: Data = {
+  TITLE: 'Telekomunikacja',
+  title_2: '',
+  AUTHOR: ['Mateusz Słotwiński', 'Janusz Korwin-Mikke', 'Richard Watterson'],
+  color: '#008F7F',
+  icon: 'telecommunications.svg',
+  pages: 500,
+  image: 'telecommunications.jpg',
+  about: aboutplaceholder,
+  levels: [
+    ['Wprowadzenie do telekomunikacji'],
+    ['Usługi i aplikacje internetu'],
+    ['Sieci i chmury teleinformatyczne'],
+    ['Techniki kodowania i modulacji'],
+    ['Transmisja bezprzewodowa i anteny'],
+    ['Transmisja przewodowa'],
+    ['Techniki bezprzewodowe i multimedialne'],
+    ['Techniki teleinformatyczne'],
+  ],
+
+  PART: 0,
+  SUBTITLE: ['', ''],
+}
+
 const Biophysics: Data = {
   TITLE: 'Biofizyka',
   title_2: '',
-  AUTHOR: 'Mateusz Słotwiński',
+  AUTHOR: ['Mateusz Słotwiński'],
   color: '#2e7d32',
   icon: 'biophysics.svg',
   pages: 500,
   image: 'economics.jpg',
   about: aboutplaceholder,
-  levels: [
-    [
-      'Analiza matematyczna: całki wielokrotne i krzywoliniowe,',
-      'szeregi Fouriera, transformacje całkowe',
-    ],
-  ],
+  levels: [['']],
 
   PART: 0,
   SUBTITLE: ['', ''],
@@ -241,7 +260,7 @@ const Biophysics: Data = {
 const PhysicsNanostr: Data = {
   TITLE: 'Fizyka Materiałów',
   title_2: 'i Nanostruktur',
-  AUTHOR: 'Mateusz Słotwiński',
+  AUTHOR: ['Mateusz Słotwiński'],
   color: '#6D547C',
   icon: 'physicsnanostr.svg',
   pages: 500,
@@ -277,7 +296,7 @@ const PhysicsNanostr: Data = {
 const PhysicsNuclear: Data = {
   TITLE: 'Fizyka i Technika',
   title_2: 'Jądrowa',
-  AUTHOR: 'Mateusz Słotwiński',
+  AUTHOR: ['Mateusz Słotwiński'],
   color: '#FF7C1E',
   icon: 'physicsnuclear.svg',
   pages: 500,
@@ -285,12 +304,12 @@ const PhysicsNuclear: Data = {
   about: aboutplaceholder,
   levels: [
     [
-      'Fizyka cząstek elementarnych, oddziaływania fundamentalne,',
-      'wstęp do elektrodynamiki kwantowej i kwantowej teorii pola',
+      'Fizyka cząstek i oddziaływań elementarnych, wstęp do',
+      'elektrodynamiki kwantowej i kwantowej teorii pola',
     ],
     [
-      'Zaawansowana fizyka jądrowa, oddziaływanie promieniowania',
-      'jonizującego z materią',
+      'Zaawansowana fizyka jądrowa, oddziaływanie',
+      'promieniowania jonizującego z materią',
     ],
     ['Metody i techniki jądrowe, dozymetria'],
     ['Podstawy fizyczne energetyki jądrowej'],
@@ -298,6 +317,39 @@ const PhysicsNuclear: Data = {
     [
       'Układy kontrolno-pomiarowe w instalacjach jądrowych,',
       'nowe rozwiązania w energetyce jądrowej',
+    ],
+  ],
+
+  PART: 0,
+  SUBTITLE: ['', ''],
+  advanced: true,
+}
+
+const QuantumEngineering: Data = {
+  TITLE: 'Inżynieria',
+  title_2: 'Kwantowa',
+  AUTHOR: ['Mateusz Słotwiński'],
+  color: '#0E4F60',
+  icon: 'quantum_engineering.svg',
+  pages: 500,
+  image: 'quantum_engineering.jpg',
+  about: aboutplaceholder,
+  levels: [
+    ['Zaawansowana mechanika kwantowa i kwantowa teoria pola'],
+    [
+      'Elektrodynamika kwantowa, makroskopowe zjawiska',
+      'kwantowe - nadprzewodnictwo i nadciekłość',
+    ],
+    [
+      'Fizyka kropek kwantowych, kwantowy efekt halla',
+      'wstęp do teorii przejść fazowych',
+    ],
+    ['Optyka kwantowa'],
+    ['Informatyka kwantowa'],
+    ['Kryptografia kwantowa'],
+    [
+      'Plazmonika nanostruktur metalicznych, elementy chemii',
+      'kwantowej, teoria dekoherencji',
     ],
   ],
 
@@ -322,7 +374,9 @@ export default class Examples {
   static Chemistry = (vol: number) => SetVol(Chemistry, vol)
   static Economics = (vol: number) => SetVol(Economics, vol)
   static Biophysics = (vol: number) => SetVol(Biophysics, vol)
+  static Telecommunications = (vol: number) => SetVol(Telecommunications, vol)
 
   static PhysicsNanostr = (vol: number) => SetVol(PhysicsNanostr, vol)
   static PhysicsNuclear = (vol: number) => SetVol(PhysicsNuclear, vol)
+  static QuantumEngineering = (vol: number) => SetVol(QuantumEngineering, vol)
 }
